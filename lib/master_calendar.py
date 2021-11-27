@@ -33,6 +33,9 @@ def create_calendar(start="2019-01-01", end="2019-12-31"):
     dates["MC_Quarter"] = dates.index.quarter
     dates["MC_Year_half"] = dates.index.month.map(lambda mth: 1 if mth < 7 else 2)
     dates["MC_Year"] = dates.index.year
+    dates["MC_YearMonth"] = (
+        dates["MC_Year"].astype(str) + "_" + dates["MC_Month"].astype(str)
+    )
     dates.reset_index(inplace=True)
     dates.index.name = "MC_Date"
 
