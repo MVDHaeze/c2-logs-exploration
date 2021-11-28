@@ -10,7 +10,7 @@ def create_calendar(start="2019-01-01", end="2019-12-31"):
 
     # record timestamp is empty for now
     dates = pd.DataFrame(columns=["calendar"], index=pd.date_range(start_ts, end_ts))
-    dates.index.name = "MC_Date"
+    dates.index.name = "mc_date"
 
     days_names = {
         i: name
@@ -27,17 +27,17 @@ def create_calendar(start="2019-01-01", end="2019-12-31"):
         )
     }
 
-    dates["MC_Day"] = dates.index.dayofweek.map(days_names.get)
-    dates["MC_Week"] = pd.Int64Index(dates.index.isocalendar().week)
-    dates["MC_Month"] = dates.index.month
-    dates["MC_Quarter"] = dates.index.quarter
-    dates["MC_Year_half"] = dates.index.month.map(lambda mth: 1 if mth < 7 else 2)
-    dates["MC_Year"] = dates.index.year
-    dates["MC_YearMonth"] = (
-        dates["MC_Year"].astype(str) + "_" + dates["MC_Month"].astype(str)
+    dates["mc_day"] = dates.index.dayofweek.map(days_names.get)
+    dates["mc_week"] = pd.Int64Index(dates.index.isocalendar().week)
+    dates["mc_month"] = dates.index.month
+    dates["mc_quarter"] = dates.index.quarter
+    dates["mc_year_half"] = dates.index.month.map(lambda mth: 1 if mth < 7 else 2)
+    dates["mc_year"] = dates.index.year
+    dates["mc_yearMonth"] = (
+        dates["mc_year"].astype(str) + "_" + dates["mc_month"].astype(str)
     )
     dates.reset_index(inplace=True)
-    dates.index.name = "MC_Date"
+    dates.index.name = "mc_date"
 
     return dates
 
