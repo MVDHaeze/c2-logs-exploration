@@ -1,0 +1,1 @@
+- [] RegEx for identifying session type
