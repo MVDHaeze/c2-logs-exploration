@@ -12,4 +12,5 @@ The c2 website offers minimal information or tool to deep dive into the logs. I 
 
 ### Likely future to dos:
 
-- [ ] Directly fetch & update data from the c2 API (wich provides also more granular information for each session)
+- [ ] ~~Directly fetch & update data from the c2 API(wich provides also more granular information for each session)~~
+- [ ] Scrap directly the website based on user id (logs must be public)
