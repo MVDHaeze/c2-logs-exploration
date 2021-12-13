@@ -13,4 +13,3 @@ The c2 website offers minimal information or tool to deep dive into the logs. I 
 ### Likely future to dos:
 
 - [ ] Directly fetch & update data from the c2 API ~~(wich provides also more granular information for each session)~~
-- [ ] Scrap directly splits time on the website based on session id for distance row (logs must be public)
