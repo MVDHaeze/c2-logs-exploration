@@ -9,7 +9,3 @@ It takes seasonal CSV exports from the [c2 log website](https://log.concept2.com
 ### Why to do that:
 
 The c2 website offers minimal information or tool to deep dive into the logs. I wanted to understand more deeply my progression by focusing on trends instead of individual sessions.
-
-### Likely future to dos:
-
-- [ ] Directly fetch & update data from the c2 API ~~(wich provides also more granular information for each session)~~
