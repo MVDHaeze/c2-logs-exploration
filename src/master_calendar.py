@@ -29,7 +29,7 @@ def create_calendar(start="2019-01-01", end="2019-12-31"):
 
     dates["mc_day"] = dates.index.dayofweek.map(days_names.get)
     dates["mc_week"] = pd.Int64Index(dates.index.isocalendar().week)
-    dates["mc_month"] = dates.index.month
+    dates["mc_month"] = dates.index.month.map("{:02}".format)
     dates["mc_quarter"] = dates.index.quarter
     dates["mc_year_half"] = dates.index.month.map(lambda mth: 1 if mth < 7 else 2)
     dates["mc_year"] = dates.index.year
